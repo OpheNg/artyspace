@@ -42,6 +42,17 @@ span.yellow{
   padding: 20px;
   border-radius: 4px;
 }
+.sharebox a{
+  text-decoration: none;
+  background-color: rgb(56, 70, 218);
+  padding: 6px 16px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+}
+.sharebox a:hover{
+  background-color: rgb(23, 33, 151) ;
+}
 .viewbox{
   padding: 20px;
 }
@@ -58,6 +69,14 @@ span.yellow{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.card h4{
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+}
+.card img{
+  align-self: center;
 }
 .profile-box, .mess-box{
   padding: 0 12px;

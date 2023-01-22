@@ -35,4 +35,13 @@ background: linear-gradient(90deg, rgba(205,202,255,1) 0%, rgba(129,127,255,0.75
   width: 200px;
   margin: 8px 4px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile-box, .mess-box{
+  padding: 0 12px;
+}
+img.av{
+  border-radius: 50%;
 }

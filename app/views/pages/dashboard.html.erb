@@ -14,27 +14,27 @@
         <%= link_to "Post", arts_path %>
 
       </div>
-      
+
       <div class="viewbox">
         <h2>Galleries</h2>
         <div class="galleries-mini">
           <div class="card">
-            <h3>Painting</h3>
+            <h4>Painting</h4>
             <p>IMAGE HERE</p>
             <%= link_to"View",paintings_path %>
           </div>
           <div class="card">
-            <h3>Drawing</h3>
+            <h4>Drawing</h4>
             <p>IMAGE HERE</p>
             <%= link_to"View",drawings_path %>
           </div>
           <div class="card">
-            <h3>Digital painting</h3>
+            <h4>Digital painting</h4>
             <p>IMAGE HERE</p>
             <%= link_to"View",digital_paintings_path %>
           </div>
           <div class="card">
-            <h3>Photography</h3>
+            <h4>Photography</h4>
             <p>IMAGE HERE</p>
             <%= link_to"View",photography_path %>
           </div>
@@ -45,12 +45,12 @@
     <div class="right">
       <div class="profile-box">
         <div class="user-infos">
-          <h3>User Nickn@me</h3>
+          <h3>Welcome Nickn@me</h3>
           <p><%= current_user.email %></p>
           <p>User city</p>
         </div>
         <div class="user-photo">
-          <p>USER PHOTO HERE</p>
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', width:'100px',class:'av' %>
           <%= link_to"edit","#" %>
         </div>
         <hr>

@@ -1,0 +1,88 @@
+<div class="container">
+  <h1>My Gallery</h1>
+  <br>
+   <%= link_to "New post", new_art_path %>
+   <br><br>
+  <div class="maygallery-box gall">
+
+    <div class="mypaint">
+      <h2>Paintings</h2>
+      <% @arts.each do |art| %>
+        <div class="art">
+          <% if art.category == "painting"%>
+            <p><%= art.title %></p>
+            <%= cl_image_tag art.photo.key, width:'300px', height: '250px', fill: :crop %>
+            <p><%= art.description %></p>
+            <p><%= art.created_at %></p>
+            <%= link_to "View", art_path(art) %>
+            <%= link_to "edit", art_path(art) %>
+            <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this art ?"} %>
+          <%end %>
+        </div>
+      <% end %>
+      <hr>
+    </div>
+
+    <div class="mydraw boxxx">
+      <h2>Drawings</h2>
+      <% @arts.each do |art| %>
+        <div class="art">
+          <% if art.category == "drawing"%>
+            <p><%= art.title %></p>
+            <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+            <p><%= art.description %></p>
+            <p><%= art.created_at %></p>
+            <%= link_to "View", art_path(art) %>
+            <%= link_to "edit", art_path(art) %>
+            <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this art ?"} %>
+
+          <%end %>
+        </div>
+      <% end %>
+      <hr>
+    </div>
+
+    <div class="mydigit boxxx">
+      <h2>Digital paintings</h2>
+      <% @arts.each do |art| %>
+        <div class="art">
+          <% if art.category == "digital painting"%>
+            <p><%= art.title %></p>
+            <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+            <p><%= art.description %></p>
+            <p><%= art.created_at %></p>
+            <%= link_to "View", art_path(art) %>
+            <%= link_to "edit", art_path(art) %>
+            <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
+
+          <%end %>
+        </div>
+      <% end %>
+      <hr>
+    </div>
+
+     <div class="myphoto boxxx">
+      <h2>Photographs</h2>
+      <% @arts.each do |art| %>
+        <div class="art">
+          <% if art.category == "photography"%>
+            <p><%= art.title %></p>
+            <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+            <p><%= art.description %></p>
+            <p><%= art.created_at %></p>
+            <%= link_to "View", art_path(art) %>
+            <%= link_to "edit", art_path(art) %>
+            <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
+
+          <%end %>
+        </div>
+      <% end %>
+      <hr>
+    </div>
+
+
+  </div>
+
+
+
+</div>

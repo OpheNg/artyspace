@@ -1,0 +1,8 @@
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
+  <% f.input :current_user_id, input_html: {value: params[:current_user_id]} %>
+  <br><br>
+  <%= f.button :submit, 'Post' %>
+<% end %>

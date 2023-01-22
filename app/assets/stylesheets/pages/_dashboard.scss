@@ -1,0 +1,38 @@
+.dash-box{
+  display: flex;
+}
+.uptext{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+}
+.left{
+  flex: 3;
+  padding: 20px;
+}
+.right{
+  flex: 1;
+  padding: 20px;
+}
+.sharebox{
+  min-height: 160px;
+  // background-color: rgb(246, 245, 245);
+  background: rgb(205,202,255);
+background: linear-gradient(90deg, rgba(205,202,255,1) 0%, rgba(129,127,255,0.756827731092437) 100%);
+  padding: 20px;
+}
+.viewbox{
+  padding: 20px;
+}
+
+.galleries-mini{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card{
+  width: 200px;
+  margin: 8px 4px;
+  padding: 10px;
+}

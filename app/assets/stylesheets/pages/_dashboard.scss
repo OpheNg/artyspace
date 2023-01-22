@@ -1,11 +1,26 @@
+// @font-face {
+//   font-family: 'Montserrat';
+//   src: url(../../fonts/Montserrat-VariableFont_wght.ttf);
+//   font-weight: normal;
+// }
+.uptext h1{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 48px ;
+}
 .dash-box{
   display: flex;
+
 }
 .uptext{
   display: flex;
   flex-direction: column;
   padding: 20px;
-
+}
+span.yellow{
+  background-color: rgb(254, 254, 155);
+  border-radius: 4px;
+  padding: 2px 4px;
 }
 .left{
   flex: 3;
@@ -13,14 +28,19 @@
 }
 .right{
   flex: 1;
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,245,255,0.756827731092437) 100%);
+  margin-bottom: 12px;
+  border-radius: 6px;
 }
 .sharebox{
   min-height: 160px;
   // background-color: rgb(246, 245, 245);
   background: rgb(205,202,255);
-background: linear-gradient(90deg, rgba(205,202,255,1) 0%, rgba(129,127,255,0.756827731092437) 100%);
+  background: linear-gradient(90deg, rgba(205,202,255,1) 0%, rgba(129,127,255,0.756827731092437) 100%);
   padding: 20px;
+  border-radius: 4px;
 }
 .viewbox{
   padding: 20px;

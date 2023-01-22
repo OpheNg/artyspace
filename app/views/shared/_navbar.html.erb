@@ -11,11 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <% unless params[:action] == 'dashboard'%>
-            <%=  link_to "Home", dashboard_path, class: "nav-link"  %>
-          <% end %>
-        </li>
+
         <li class="nav-item">
           <%= link_to "My gallery", arts_path, class: "nav-link" %>
         </li>
@@ -42,6 +38,14 @@
                 <%= link_to "Profile", "#", class: "nav-link " %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link " %>
               </div>
+        </li>
+
+        <li class="nav-item active">
+          <% unless params[:action] == 'dashboard'%>
+            <%=  link_to dashboard_path, class: "nav-link" do  %>
+              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665345146/click%20n%20pole/home_iyuz6r.svg', width:"30px" %>
+            <% end %>
+          <% end %>
         </li>
 
 

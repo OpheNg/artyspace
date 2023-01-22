@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
   <% end %>
 
@@ -12,19 +12,38 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Home", dashboard_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "My gallery", "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Messages", "#", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+            <li class="dropdown-toggle  nav-link " id="hand" data-bs-toggle="dropdown" aria-expanded="false">
+              Galleries
+            </li>
+              <div class="dropdown-menu  dropdown-menu-end" aria-labelledby="navbarDropdown ">
+                <%= link_to "Painting", paintings_path, class: "nav-link" %>
+                <%= link_to "Drawing", drawings_path, class: "nav-link" %>
+                <%= link_to "Digital painting", digital_paintings_path, class: "nav-link" %>
+                <%= link_to "Photography", photography_path, class: "nav-link" %>
+              </div>
         </li>
+
+         <li class="nav-item dropdown">
+            <li class="dropdown-toggle  nav-link " id="hand" data-bs-toggle="dropdown" aria-expanded="false">
+              My account
+            </li>
+              <div class="dropdown-menu  dropdown-menu-end" aria-labelledby="navbarDropdown ">
+                <%= link_to "Profile", "#", class: "nav-link " %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link " %>
+              </div>
+        </li>
+
+
+
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>

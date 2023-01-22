@@ -13,8 +13,9 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar'  %>
     <%= render 'shared/flashes' %>
+    <%# unless params[:action] == 'home' %>
 
     <%= yield %>
   </body>

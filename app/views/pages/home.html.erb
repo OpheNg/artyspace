@@ -4,6 +4,11 @@
       <h1>Arty space</h1>
       <p>Welcome to the best digital gallery !</p>
       <p>A simple way to share your work all around the world, and increase your visibility as an artist.</p>
+      <% if current_user %>
+        <%= link_to "My space", dashboard_path %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path %>
+      <% end %>
     </div>
     <div class="banner-img">
       <%= image_tag'gallery.png', width:"600px" %>

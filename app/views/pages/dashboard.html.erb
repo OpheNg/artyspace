@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="uptext">
+    <h1>Welcome to Arty Space</h1>
+    <h2>Your digital gallery !</h2>
+  </div>
+  <div class="dashbox">
+
+    <div class="left">
+      <div class="sharebox">
+        <hr>
+        <h3>Post my work</h3>
+        <%= link_to"post","#" %>
+        <hr>
+      </div>
+      <div class="viewbox">
+        <h2>Our galleries</h2>
+        <div class="galleries-mini">
+          <div class="card">
+            <h3>Painting</h3>
+            <p>IMAGE HERE</p>
+            <%= link_to"View",paintings_path %>
+          </div>
+          <div class="card">
+            <h3>Drawing</h3>
+            <p>IMAGE HERE</p>
+            <%= link_to"View",drawings_path %>
+          </div>
+          <div class="card">
+            <h3>Digital painting</h3>
+            <p>IMAGE HERE</p>
+            <%= link_to"View",digital_paintings_path %>
+          </div>
+          <div class="card">
+            <h3>Photography</h3>
+            <p>IMAGE HERE</p>
+            <%= link_to"View",photography_path %>
+          </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="profile-box">
+        <div class="user-infos">
+          <h3>User Nickn@me</h3>
+          <p><%= current_user.email %></p>
+          <p>User city</p>
+        </div>
+        <div class="user-photo">
+          <p>USER PHOTO HERE</p>
+          <%= link_to"edit","#" %>
+        </div>
+        <hr>
+      </div>
+      <div class="mess-box">
+        <h3>Messages</h3>
+        <p>My last 3 messages</p>
+        <p>message</p>
+        <p>message</p>
+        <p>message</p>
+        <%= link_to"All messages","#" %>
+      </div>
+
+    </div>
+
+    </div>
+
+  </div>
+
+
+
+</div>

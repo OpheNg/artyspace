@@ -1,1 +1,37 @@
 // Specific CSS for your home-page
+.banner {
+  display: flex;
+  padding: 40px 10%;
+  background-color: #FFBD59;
+  justify-content: space-between;
+
+}
+.containerrr{
+  padding: 40px 10%;
+}
+.banner img{
+  border-radius: 6px;
+}
+.banner-txt{
+  padding: 20px 20px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.banner-txt h1{
+  font-size: 48px;
+  font-weight: bold;
+}
+.banner-txt a{
+  text-decoration: none;
+  background-color: rgb(56, 70, 218);
+  padding: 6px 16px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+}
+.banner-txt a:hover{
+  background-color: rgb(23, 33, 151) ;
+}

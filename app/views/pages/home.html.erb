@@ -1,8 +1,10 @@
-<div class="container">
   <div class="banner">
+    <div class="banner-img">
+      <%= image_tag'gallery.png', width:"600px" %>
+    </div>
     <div class="banner-txt">
       <h1>Arty space</h1>
-      <p>Welcome to the best digital gallery !</p>
+      <h2>Welcome to the best digital gallery !</h2>
       <p>A simple way to share your work all around the world, and increase your visibility as an artist.</p>
       <% if current_user %>
         <%= link_to "My space", dashboard_path %>
@@ -10,37 +12,38 @@
         <%= link_to "Sign in", new_user_session_path %>
       <% end %>
     </div>
-    <div class="banner-img">
-      <%= image_tag'gallery.png', width:"600px" %>
-    </div>
   </div>
-  <div class="infos">
-    <div class="share-box">
-      <h2>Share your work</h2>
-      <p>Create your gallery and post your art</p>
+
+  <div class="containerrr">
+
+    <div class="infos">
+      <div class="share-box">
+        <h2>Share your work</h2>
+        <p>Create your gallery and post your art</p>
+      </div>
+      <div class="gallerybox">
+        <h2>Get access to our galleries</h2>
+        <p>Discover thousand pieces of art</p>
+        <p>Wanna elaborate new projects with our artists ? Contact them !</p>
+      </div>
+
     </div>
-    <div class="gallerybox">
-      <h2>Get access to our galleries</h2>
-      <p>Discover thousand pieces of art</p>
-    </div>
+    <footer>
+      <div class="contact-info">
+        <h4>Arty Space</h4>
+        <p>Contact:</p>
+        <small>This is the adress <br> 14522 Planet Heaarth</small>
+        <small>contact@artyspace.com</small>
+      </div>
+      <div class="social">
+        <ul>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+        </ul>
+
+      </div>
+    </footer>
+
 
   </div>
-  <footer>
-    <div class="contact-info">
-      <h4>Arty Sapce</h4>
-      <p>Contact:</p>
-      <small>This is the adress <br> 14522 Planet Heaarth</small>
-      <small>contact@artyspace.com</small>
-    </div>
-    <div class="social">
-      <ul>
-        <li><i class="fa-brands fa-facebook"></i></li>
-        <li><i class="fa-brands fa-instagram"></i></li>
-        <li><i class="fa-brands fa-youtube"></i></li>
-      </ul>
-
-    </div>
-  </footer>
-
-
-</div>

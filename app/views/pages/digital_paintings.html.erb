@@ -1,9 +1,18 @@
 <div class="container">
 
-  <div class="digital-paintings-box gall">
+  <div class="digits-box gall">
     <h1>Digital paintings</h1>
+    <div class="bloccc">
+      <% allpaintings = Art.where(category: "digital painting") %>
+      <% allpaintings.each do |art| %>
+        <div class="card-gall">
+          <p><%= cl_image_tag art.photo.key, width:'250px', height: '200px' %></p>
+          <p><%= art.title %></p>
+          <p><%= art.description %></p>
+          <p><%= art.user.email %></p>
+
+        </div>
+      <% end %>
+    </div>
   </div>
-
-
-
 </div>

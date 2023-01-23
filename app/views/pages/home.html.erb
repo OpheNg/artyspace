@@ -56,6 +56,11 @@
     </div>
     <div class="t">
       <i class="fa-solid fa-cube"></i><h2>Share your work</h2>
+      <% if user_signed_in? %>
+        <%= link_to "Post", arts_path %>
+      <% else %>
+        <%= link_to "Post", new_user_session_path %>
+      <% end %>
     </div>
   </div>
 </div>

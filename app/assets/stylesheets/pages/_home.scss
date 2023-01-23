@@ -4,6 +4,8 @@
   padding: 40px 10%;
   background-color: #FFBD59;
   justify-content: space-between;
+  align-items: center;
+  height: 75vh;
 
 }
 .containerrr{
@@ -17,7 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  height: 80%;
 }
 .banner-txt h1{
   font-size: 48px;
@@ -33,6 +35,18 @@
   width: fit-content;
 }
 .banner-txt a:hover{
+  background-color: rgb(23, 33, 151) ;
+}
+.t a{
+  text-decoration: none;
+  background-color: rgb(56, 70, 218);
+  padding: 6px 16px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+}
+.t a:hover{
   background-color: rgb(23, 33, 151) ;
 }
 .share-box{
@@ -66,6 +80,7 @@
 }
 .ldg-img img{
   border-radius: 4px;
+  padding: 4px;
 }
 .ldg-img p{
   text-align: center;

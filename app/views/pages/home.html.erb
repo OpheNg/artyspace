@@ -16,14 +16,43 @@
 
 <div class="containerrr">
   <div class="infos">
-    <div class="share-box">
-      <h2>Share your work</h2>
-      <p>Create your gallery and post your art</p>
-    </div>
     <div class="gallerybox">
-      <h2>Get access to our galleries</h2>
-      <p>Discover thousand pieces of art</p>
-      <p>Wanna elaborate new projects with our artists ? Contact them !</p>
+      <i class="fa-solid fa-cube"></i><h2>Get access to our galleries</h2>
+
+      <div class="images">
+        <div class="ldg-img">
+          <p>Paintings</p>
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674481369/Arty/lion_koroyj.jpg', width:"180px", height:'180px' %>
+        </div>
+        <div class="ldg-img">
+          <p>Drawings</p>
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674481369/Arty/bird_g7smid.jpg', width:"180px", height:'180px' %>
+        </div>
+        <div class="ldg-img">
+          <p>Digital</p>
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674425113/Arty/digital_pyk6m5.jpg', width:"180px", height:'180px' %>
+        </div>
+        <div class="ldg-img">
+          <p>Photography</p>
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674425110/Arty/photo_vacpzw.png', width:"180px", height:'180px' %>
+        </div>
+
+      </div>
+    </div>
+    <div class="share-box">
+      <i class="fa-solid fa-cube"></i><h2>Share your work</h2>
+      <p>Create your gallery and post your art</p>
+      <br>
+      <div class="artpost">
+        <div class="artext">
+          <p>Post your work, and get noticed !</p>
+          <p>Elaborate projects with other artist</p>
+        </div>
+        <div class="artimg">
+          <%#= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674425111/Arty/Post_ztbuze.png', width:"500px" %>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>

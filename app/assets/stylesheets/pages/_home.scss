@@ -35,6 +35,33 @@
 .banner-txt a:hover{
   background-color: rgb(23, 33, 151) ;
 }
+.share-box{
+  text-align: right;
+  padding: 30px 0;
+}
+.gallerybox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.images{
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 10%;
+
+}
+.ldg-img img{
+  border-radius: 4px;
+}
+.ldg-img p{
+  text-align: center;
+  font-weight: 600;
+}
+.artpost{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 footer{
   background-color: rgb(62, 61, 61);
   color: white;

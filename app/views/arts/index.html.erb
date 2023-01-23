@@ -19,7 +19,7 @@
               <p><%= art.created_at %></p>
               <%= link_to "View", art_path(art) %>
               <%= link_to "edit", art_path(art) %>
-              <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this art ?"} %>
+              <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
             <%end %>
           </div>
         <% end %>
@@ -33,12 +33,14 @@
         <div class="art">
           <% if art.category == "drawing"%>
             <p><%= art.title %></p>
-            <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+            <% if art.photo.attached? %>
+                <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+              <% end %>
             <p><%= art.description %></p>
             <p><%= art.created_at %></p>
             <%= link_to "View", art_path(art) %>
             <%= link_to "edit", art_path(art) %>
-            <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this art ?"} %>
+            <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
 
           <%end %>
         </div>
@@ -52,7 +54,9 @@
         <div class="art">
           <% if art.category == "digital painting"%>
             <p><%= art.title %></p>
-            <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+            <% if art.photo.attached? %>
+                <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+              <% end %>
             <p><%= art.description %></p>
             <p><%= art.created_at %></p>
             <%= link_to "View", art_path(art) %>
@@ -71,7 +75,9 @@
         <div class="art">
           <% if art.category == "photography"%>
             <p><%= art.title %></p>
-            <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+            <% if art.photo.attached? %>
+                <%= cl_image_tag art.photo.key, width:'300px', height: '250px' %>
+              <% end %>
             <p><%= art.description %></p>
             <p><%= art.created_at %></p>
             <%= link_to "View", art_path(art) %>

@@ -37,7 +37,21 @@
 }
 .share-box{
   text-align: right;
-  padding: 30px 0;
+  padding: 40px 10%;
+  background: rgb(245,245,245);
+  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(239,239,255,0.756827731092437) 100%);
+}
+.artext{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.artext img{
+  padding-left: 30px;
+}
+.artext p {
+  font-size: 20px;
+  font-style: italic;
 }
 .gallerybox {
   display: flex;
@@ -61,6 +75,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 300px;
 }
 footer{
   background-color: rgb(62, 61, 61);

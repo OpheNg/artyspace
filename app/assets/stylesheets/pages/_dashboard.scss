@@ -69,6 +69,9 @@ span.yellow{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  border-radius: 6px;
 }
 .card h4{
   font-size: 20px;

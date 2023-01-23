@@ -12,7 +12,9 @@
           <div class="art">
             <% if art.category == "painting"%>
               <p><%= art.title %></p>
-              <%= cl_image_tag art.photo.key, width:'300px', height: '250px', fill: :crop %>
+              <% if art.photo.attached? %>
+                <%= cl_image_tag art.photo.key, width:'300px', height: '250px', fill: :crop %>
+              <% end %>
               <p><%= art.description %></p>
               <p><%= art.created_at %></p>
               <%= link_to "View", art_path(art) %>

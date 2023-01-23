@@ -35,3 +35,26 @@
 .banner-txt a:hover{
   background-color: rgb(23, 33, 151) ;
 }
+footer{
+  background-color: rgb(62, 61, 61);
+  color: white;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer ul {
+  padding-left: 0;
+}
+footer li{
+  list-style: none;
+  display: inline;
+}
+
+ i{
+  font-size: 32px;
+  padding: 8px;
+}
+i:hover{
+  color: #FFBD59;
+}

@@ -49,14 +49,23 @@
       <div class="right">
         <div class="profile-box">
           <div class="user-infos">
-            <h3>Welcome Nickn@me</h3>
+            <% if @user.nickname.empty? %>
+              <h3>Welcome !</h3>
+            <% else %>
+              <h3>Welcome <br><%= @user.nickname %> !</h3>
+            <% end %>
             <br>
             <p><%= current_user.email %></p>
-            <p>User city</p>
+            <p><%= @user.city %></p>
           </div>
           <div class="user-photo">
-            <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', width:'100px',class:'av' %>
-            <%= link_to"edit","#" %>
+            <% if @user.photo.attached? %>
+              <%= cl_image_tag @user.photo.key , width:'100px',class:'av' %>
+            <% else %>
+              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', width:'100px',class:'av' %>
+            <% end %>
+            <br>
+            <%= link_to"edit", edit_user_path(@user) %>
           </div>
           <hr>
         </div>

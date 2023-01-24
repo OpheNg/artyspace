@@ -1,0 +1,15 @@
+<div class="editprofile">
+<br>
+
+  <div class="userform">
+  <h3 style='color:gray;'>My informations</h3>
+  <br>
+    <%= simple_form_for @user do |f| %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :nickname %>
+        <%= f.input :city %>
+      <br>
+      <%= f.button :submit, 'Save profile' %>
+    <% end %>
+  </div>
+</div>

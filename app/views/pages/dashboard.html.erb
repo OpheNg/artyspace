@@ -52,11 +52,11 @@
             <% if @user.nickname.empty? %>
               <h3>Welcome !</h3>
             <% else %>
-              <h3>Welcome <br><%= @user.nickname %> !</h3>
+              <h3 class="user">Welcome <br><%= @user.nickname %> !</h3>
             <% end %>
             <br>
             <p><%= current_user.email %></p>
-            <p><%= @user.city %></p>
+            <p class ="city"><%= @user.city %></p>
           </div>
           <div class="user-photo">
             <% if @user.photo.attached? %>
@@ -65,7 +65,7 @@
               <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', width:'100px',class:'av' %>
             <% end %>
             <br>
-            <%= link_to"edit", edit_user_path(@user) %>
+            <%= link_to"Edit", edit_user_path(@user) %>
           </div>
           <hr>
         </div>

@@ -11,8 +11,34 @@
   font-weight: bold;
   font-size: 48px ;
 }
-.uptext {
-
+p.city{
+  color: #FFBD59;
+  font-weight: bold;
+}
+.user{
+  color: rgb(56, 70, 218);
+  font-weight: bold;
+}
+.user-photo{
+  display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  flex-direction: column;
+}
+.user-photo a{
+  text-decoration: none;
+  background-color: rgb(56, 70, 218);
+  padding: 4px 12px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.user-photo a:hover{
+  background-color: rgb(23, 33, 151) ;
+}
+.user-photo img{
+  margin-right: 30px;
 }
 .dash-box{
   display: flex;
@@ -35,16 +61,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
 }
 .right{
   flex: 1;
-  padding: 20px 20px 30px 20px;
+  padding: 30px;
   // background: rgb(255,255,255);
   // background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,245,255,0.756827731092437) 100%);
   margin-bottom: 12px;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+
   // background-color: #FFBD59;
 //   background: rgb(255,189,89);
 // background: linear-gradient(90deg, rgba(255,189,89,1) 0%, rgba(253,219,149,1) 100%);
@@ -59,8 +87,8 @@
 }
 .sharebox a{
   text-decoration: none;
-  background-color: rgb(56, 70, 218);
-  padding: 6px 16px;
+  background-color: #FFBD59;
+  padding: 6px 24px;
   border-radius: 6px;
   color: white;
   font-weight: bold;

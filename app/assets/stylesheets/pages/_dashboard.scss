@@ -3,10 +3,16 @@
 //   src: url(../../fonts/Montserrat-VariableFont_wght.ttf);
 //   font-weight: normal;
 // }
+.padbox{
+  padding: 40px 8%;
+}
 .uptext h1{
   font-family: 'Montserrat';
   font-weight: bold;
   font-size: 48px ;
+}
+.uptext {
+
 }
 .dash-box{
   display: flex;
@@ -17,11 +23,11 @@
   flex-direction: column;
   padding: 20px;
 }
-span.yellow{
-  background-color: rgb(254, 254, 155);
-  border-radius: 4px;
-  padding: 2px 4px;
-}
+// span.yellow{
+//   background-color: rgb(254, 254, 155);
+//   border-radius: 4px;
+//   padding: 2px 4px;
+// }
 .left{
   flex: 3;
   padding: 20px;
@@ -29,16 +35,20 @@ span.yellow{
 .right{
   flex: 1;
   padding: 20px 20px 30px 20px;
-  background: rgb(255,255,255);
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,245,255,0.756827731092437) 100%);
+  // background: rgb(255,255,255);
+  // background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,245,255,0.756827731092437) 100%);
   margin-bottom: 12px;
   border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  // background-color: #FFBD59;
+//   background: rgb(255,189,89);
+// background: linear-gradient(90deg, rgba(255,189,89,1) 0%, rgba(253,219,149,1) 100%);
 }
 .sharebox{
   min-height: 160px;
   // background-color: rgb(246, 245, 245);
-  background: rgb(205,202,255);
-  background: linear-gradient(90deg, rgba(205,202,255,1) 0%, rgba(129,127,255,0.756827731092437) 100%);
+  // background: rgb(205,202,255);
+  // background: linear-gradient(90deg, rgba(205,202,255,1) 0%, rgba(129,127,255,0.756827731092437) 100%);
   padding: 20px;
   border-radius: 4px;
 }
@@ -55,6 +65,8 @@ span.yellow{
 }
 .viewbox{
   padding: 20px;
+  // background: rgb(245,245,245);
+  // background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(239,239,255,0.756827731092437) 100%);
 }
 
 .galleries-mini{
@@ -63,14 +75,15 @@ span.yellow{
   justify-content: space-evenly;
 }
 .card{
-  width: 200px;
+  width: 160px;
   margin: 8px 4px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   border-radius: 6px;
 }
 .card h4{

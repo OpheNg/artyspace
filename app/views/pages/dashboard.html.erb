@@ -1,75 +1,75 @@
-<div class="container">
 
-
+<div class="padbox">
   <div class="dash-box">
 
-    <div class="left">
-      <div class="uptext">
-        <h1>Welcome to <span class ="yellow">Arty Space</span></h1>
-        <h2>Your digital gallery !</h2>
-      </div>
-      <div class="sharebox">
-        <h3>Post my work</h3>
-        <p> Share your art all around the world and increase your visibility !</p>
-        <p>Create your own galleries</p>
-        <%= link_to "Post", arts_path %>
-      </div>
+      <div class="left">
+        <div class="uptext">
+          <h1>Welcome to <span class ="yellow">Arty Space</span></h1>
+          <h2>Your digital gallery !</h2>
+        </div>
+        <div class="sharebox">
+          <h3>Post my work</h3>
+          <p> Share your art all around the world and increase your visibility !</p>
+          <p>Create your own galleries</p>
+          <%= link_to "Post", arts_path %>
+        </div>
 
-      <div class="viewbox">
-        <h2>Galleries</h2>
-        <p>Take a look at our artists work. Thousand pieces of art in our galleries!</p>
-        <div class="galleries-mini">
-          <div class="card">
-            <h4>Painting</h4>
-            <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427055/Arty/Sans_titre_-_2023-01-22T233542.827_dxjr6b.png', width:"60px" %>
-            <%= link_to"View",paintings_path %>
-          </div>
-          <div class="card">
-            <h4>Drawing</h4>
-            <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427055/Arty/Sans_titre_-_2023-01-22T233511.918_y2gxlb.png', width:"60px" %>
-            <%= link_to"View",drawings_path %>
-          </div>
-          <div class="card">
-            <h4>Digital painting</h4>
-            <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427091/Arty/ablet_3_d8m2jm.png', width:"60px" %>
-            <%= link_to"View",digital_paintings_path %>
-          </div>
-          <div class="card">
-            <h4>Photography</h4>
-            <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427091/Arty/ablet_2_v1h6kf.png', width:"60px" %>
-            <%= link_to"View",photography_path %>
+        <div class="viewbox">
+          <h2>Galleries</h2>
+          <p>Take a look at our artists work. Thousand pieces of art in our galleries!</p>
+          <div class="galleries-mini">
+            <div class="card">
+              <h6>Painting</h6>
+              <%=  link_to paintings_path do %>
+                <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427055/Arty/Sans_titre_-_2023-01-22T233542.827_dxjr6b.png', width:"60px" %>
+              <% end %>
+            </div>
+            <div class="card">
+              <h6>Drawing</h6>
+              <%= link_to drawings_path do %>
+                <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427055/Arty/Sans_titre_-_2023-01-22T233511.918_y2gxlb.png', width:"60px" %>
+              <% end %>
+            </div>
+            <div class="card">
+              <h6>Digital painting</h6>
+              <%= link_to digital_paintings_path do %>
+                <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427091/Arty/ablet_3_d8m2jm.png', width:"60px" %>
+              <% end %>
+            </div>
+            <div class="card">
+              <h6>Photography</h6>
+              <%= link_to photography_path do %>
+                <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427091/Arty/ablet_2_v1h6kf.png', width:"60px" %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="right">
-      <div class="profile-box">
-        <div class="user-infos">
-          <h3>Welcome Nickn@me</h3>
-          <p><%= current_user.email %></p>
-          <p>User city</p>
+      <div class="right">
+        <div class="profile-box">
+          <div class="user-infos">
+            <h3>Welcome Nickn@me</h3>
+            <p><%= current_user.email %></p>
+            <p>User city</p>
+          </div>
+          <div class="user-photo">
+            <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', width:'100px',class:'av' %>
+            <%= link_to"edit","#" %>
+          </div>
+          <hr>
         </div>
-        <div class="user-photo">
-          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', width:'100px',class:'av' %>
-          <%= link_to"edit","#" %>
+        <div class="mess-box">
+          <h3>Messages</h3>
+          <p>My 3 last messages</p>
+          <p>message</p>
+          <p>message</p>
+          <p>message</p>
+          <%= link_to"All messages","#" %>
         </div>
-        <hr>
       </div>
-      <div class="mess-box">
-        <h3>Messages</h3>
-        <p>My 3 last messages</p>
-        <p>message</p>
-        <p>message</p>
-        <p>message</p>
-        <%= link_to"All messages","#" %>
+
       </div>
-    </div>
 
     </div>
-
-  </div>
-
-
-
 </div>

@@ -16,7 +16,8 @@
 }
 .dash-box{
   display: flex;
-
+  height: 100%;
+  min-height: 100vh;
 }
 .uptext{
   display: flex;
@@ -31,6 +32,10 @@
 .left{
   flex: 3;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 .right{
   flex: 1;

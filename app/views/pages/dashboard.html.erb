@@ -49,11 +49,7 @@
       <div class="right">
         <div class="profile-box">
           <div class="user-infos">
-            <% if @user.nickname.empty? %>
-              <h3>Welcome !</h3>
-            <% else %>
               <h3 class="user">Welcome <br><%= @user.nickname %> !</h3>
-            <% end %>
             <br>
             <p><%= current_user.email %></p>
             <p class ="city"><%= @user.city %></p>

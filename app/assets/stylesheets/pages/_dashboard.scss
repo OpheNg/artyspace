@@ -56,7 +56,7 @@ p.city{
 //   padding: 2px 4px;
 // }
 .left{
-  flex: 3;
+  flex: 4;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -101,7 +101,19 @@ p.city{
   // background: rgb(245,245,245);
   // background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(239,239,255,0.756827731092437) 100%);
 }
-
+.mess-box a{
+  text-decoration: none;
+  background-color: rgb(56, 70, 218);
+  padding: 4px 12px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+.mess-box a:hover{
+  background-color: rgb(23, 33, 151) ;
+}
 .galleries-mini{
   display: flex;
   flex-wrap: wrap;

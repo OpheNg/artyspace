@@ -1,6 +1,5 @@
 .myart{
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
 }
 .giant{
@@ -16,13 +15,24 @@ h1.mygallery-title{
   font-weight: bold;
   padding-left: 30px;
 }
+.myart{
+  overflow: auto;
+  white-space: nowrap;
+  width: 70%;
+}
 .creategall{
+  // padding: 30px;
+  // border-radius: 6px;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // margin-right: 10%;
+
   padding: 30px;
   border-radius: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 10%;
 }
 .big-card{
   margin-bottom: 12px;
@@ -30,10 +40,18 @@ h1.mygallery-title{
   border-radius: 6px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: white;
-  flex:3;
+  // flex:5;
+  width: 70%;
+
+
 }
+
 .rightside{
-  flex: 1;
+  flex-grow: 1;
+  // flex:2;
+}
+.creatext {
+  width: 100%;
 }
 .creatext a{
   text-decoration: none;

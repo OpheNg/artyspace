@@ -1,10 +1,13 @@
-<%= simple_form_for @art do |f| %>
+<div class="edit-art-form">
+  <%= simple_form_for @art do |f| %>
 
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.select :category, Art::CATEGORIES %>
-  <%= f.input :photo, as: :file %>
-  <% f.input :current_user_id, input_html: {value: params[:current_user_id]} %>
-  <br><br>
-  <%= f.button :submit, 'Post' %>
-<% end %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.select :category, Art::CATEGORIES %>
+        <%= f.input :photo, as: :file %>
+        <% f.input :current_user_id, input_html: {value: params[:current_user_id]} %>
+        <br><br>
+        <%= f.button :submit, 'Post' %>
+      <% end %>
+
+</div>

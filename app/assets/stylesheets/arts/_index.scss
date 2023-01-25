@@ -2,6 +2,32 @@
   display: flex;
   flex-wrap: wrap;
 }
+h1.mygallery-title{
+  font-size: 48px;
+  font-weight: bold;
+}
+.creategall{
+  padding: 30px;
+  border-radius: 6px;
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10%;
+}
+.creatext a{
+  text-decoration: none;
+  background-color: rgb(56, 70, 218);
+  padding: 4px 12px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+.creatext a:hover{
+  background-color: rgb(23, 33, 151) ;
+}
 .mypaint h2 {
   color: rgb(135, 214, 164);
 }

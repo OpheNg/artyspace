@@ -1,6 +1,6 @@
 .myart{
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 h1.mygallery-title{
   font-size: 48px;
@@ -9,7 +9,6 @@ h1.mygallery-title{
 .creategall{
   padding: 30px;
   border-radius: 6px;
-  // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,9 +39,14 @@ h1.mygallery-title{
 .myphoto h3{
   color: rgb(117, 156, 242);
 }
-.art{
-  margin: 6px;
-}
+// .art{
+//   margin: 6px;
+// }
 .art img {
-  border-radius: 6px;
+  border-radius: 15px;
+  padding: 10px;
+}
+.big{
+  display: flex;
+  justify-content: space-between;
 }

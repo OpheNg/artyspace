@@ -18,21 +18,19 @@ h1.mygallery-title{
   padding-left: 30px;
 }
 .myart{
-  overflow-x: auto;
-  overscroll-behavior: contain;
-  white-space: nowrap;
-  max-width: 75%;
+  // overflow-x: auto;
+  // white-space: nowrap;
+  // max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 
+}
+.mygallery-box{
+  width:100%;
 }
 
 .creategall{
-  // padding: 30px;
-  // border-radius: 6px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // margin-right: 10%;
-
   padding: 30px;
   border-radius: 6px;
   display: flex;
@@ -45,16 +43,13 @@ h1.mygallery-title{
   border-radius: 6px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: white;
-  // flex:5;
   width: 70%;
-
-
 }
 
-.rightside{
-  flex-grow: 1;
-  // flex:2;
-}
+// .rightside{
+//   flex-grow: 1;
+//   // flex:2;
+// }
 .creatext {
   width: 100%;
 }
@@ -93,4 +88,5 @@ h1.mygallery-title{
 .big{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }

@@ -22,8 +22,8 @@
             <div class="mypaint boxxx">
               <h3>My paintings</h3>
               <div class="myart">
-                <% paint = Art.where(category: "painting")%>
-                <% paint.each do |art| %>
+                <% paint = @arts.where(category: "painting")%>
+                <% paint.first(4).each do |art| %>
                   <div class="art">
                     <% if art.user == current_user %>
                       <%= link_to art_path(art) do %>
@@ -41,8 +41,8 @@
               <br><br>
               <h3>My drawings</h3>
               <div class="myart">
-                <% draw = Art.where(category: "drawing")%>
-                <% draw.each do |art| %>
+                <% draw = @arts.where(category: "drawing")%>
+                <% draw.first(4).each do |art| %>
                   <div class="art">
                     <% if art.user == current_user %>
                       <%= link_to art_path(art) do %>
@@ -60,8 +60,8 @@
               <br><br>
               <h3>My digital paintings</h3>
               <div class="myart">
-                <% digit= Art.where(category: "digital painting") %>
-                <% digit.each do |art| %>
+                <% digit= @arts.where(category: "digital painting") %>
+                <% digit.first(4).each do |art| %>
                   <div class="art">
                     <% if art.user == current_user %>
                       <%= link_to art_path(art) do %>
@@ -78,8 +78,8 @@
               <br><br>
               <h3>My photographs</h3>
               <div class="myart">
-                <% photo = Art.where(category: "photography")%>
-                <% photo.each do |art| %>
+                <% photo = @arts.where(category: "photography")%>
+                <% photo.first(4).each do |art| %>
                   <div class="art">
                     <% if art.user == current_user %>
                       <%= link_to art_path(art) do %>

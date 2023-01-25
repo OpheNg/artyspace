@@ -1,7 +1,7 @@
 class ArtsController < ApplicationController
   def index
     @user = current_user
-    @arts = Art.all
+    @arts = Art.where(user_id: current_user.id)
   end
 
   def show

@@ -5,6 +5,10 @@
 // }
 .padbox{
   padding: 40px 8%;
+  background: rgb(245,245,245);
+  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(239,239,255,0.756827731092437) 100%);
+//   background: rgb(251,233,172);
+// background: linear-gradient(90deg, rgba(251,233,172,0.3786764705882353) 0%, rgba(139,168,230,0.23301820728291311) 100%);
 }
 .uptext h1{
   font-family: 'Montserrat';
@@ -44,6 +48,7 @@ p.city{
   display: flex;
   height: 100%;
   min-height: 100vh;
+  justify-content: space-between;
 }
 .uptext{
   display: flex;
@@ -57,20 +62,26 @@ p.city{
 // }
 .left{
   flex: 4;
-  padding: 20px;
+  padding:30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
 
 }
 .right{
   flex: 1;
   padding: 30px;
+  background-color: white;
   // background: rgb(255,255,255);
   // background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(245,245,255,0.756827731092437) 100%);
   margin-bottom: 12px;
+  margin-left: 30px;
   border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 
   // background-color: #FFBD59;
@@ -129,7 +140,7 @@ p.city{
   justify-content: space-between;
   align-items: center;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
 }
 .card h4{

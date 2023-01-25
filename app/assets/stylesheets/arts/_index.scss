@@ -1,10 +1,20 @@
 .myart{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.giant{
+  background: rgb(245,245,245);
+  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(239,239,255,0.756827731092437) 100%);
+}
+.bbbox{
+  display: flex;
+  padding: 30px;
 }
 h1.mygallery-title{
   font-size: 48px;
   font-weight: bold;
+  padding-left: 30px;
 }
 .creategall{
   padding: 30px;
@@ -13,6 +23,17 @@ h1.mygallery-title{
   justify-content: space-between;
   align-items: center;
   margin-right: 10%;
+}
+.big-card{
+  margin-bottom: 12px;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  flex:3;
+}
+.rightside{
+  flex: 1;
 }
 .creatext a{
   text-decoration: none;

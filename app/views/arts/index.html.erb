@@ -1,123 +1,131 @@
-<div class="container">
-  <h1 class="mygallery-title">My Gallery</h1>
-    <br>
-  <div class="creategall">
-    <div class="creatext">
-      <h2>Fill your galleries</h2>
-      <p>Upload your artwork and make it visible in one click !</p>
-      <br>
-      <%= link_to "New post", new_art_path %>
-      <br><br>
-    </div>
-  </div>
-
-   <%# ----------------------------------------------------------------------------------- %>
-  <div class="big">
-
-    <div class="mygallery-box gall">
-      <div class="mypaint boxxx">
-        <h3>My paintings</h3>
-        <div class="myart">
-          <% paint = Art.where(category: "painting")%>
-          <% paint.each do |art| %>
-            <div class="art">
-              <% if art.user == current_user %>
-                <%= link_to art_path(art) do %>
-                  <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
-                <% end %>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-        <hr>
-      </div>
-
-      <div class="mydraw boxxx">
-        <h3>My drawings</h3>
-        <div class="myart">
-          <% draw = Art.where(category: "drawing")%>
-          <% draw.each do |art| %>
-            <div class="art">
-              <% if art.user == current_user %>
-                <%= link_to art_path(art) do %>
-                  <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
-                <% end %>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-        <hr>
-      </div>
-
-      <div class="mydigit boxxx">
-        <h3>My digital paintings</h3>
-        <div class="myart">
-          <% digit= Art.where(category: "digital painting") %>
-          <% digit.each do |art| %>
-            <div class="art">
-              <% if art.user == current_user %>
-                <%= link_to art_path(art) do %>
-                  <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
-                <% end %>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-        <hr>
-      </div>
-
-      <div class="myphoto boxxx">
-        <h3>My photographs</h3>
-        <div class="myart">
-          <% photo = Art.where(category: "photography")%>
-          <% photo.each do |art| %>
-            <div class="art">
-              <% if art.user == current_user %>
-                <%= link_to art_path(art) do %>
-                  <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
-                <% end %>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-        <hr>
-      </div>
-    </div>
-
-    <div class="rightside">
-      <div class="right">
-        <div class="profile-box">
-          <div class="user-infos">
-              <h3 class="user">Welcome <br><%= @user.nickname %> !</h3>
-            <br>
-            <p><%= current_user.email %></p>
-            <p class ="city"><%= @user.city %></p>
-          </div>
-          <div class="user-photo">
-            <% if @user.photo.attached? %>
-              <%= cl_image_tag @user.photo.key , width:'100px',class:'av' %>
-            <% else %>
-              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', width:'100px',class:'av' %>
-            <% end %>
-            <br>
-            <%= link_to"Edit", edit_user_path(@user) %>
-          </div>
-          <hr>
-        </div>
-        <div class="mess-box">
-          <h3>Reviews</h3>
+<div class="giant">
+  <div class="container">
+      <div class="bbbox">
+        <div class="big-card">
+        <h1 class="mygallery-title">My Gallery</h1>
           <br>
-          <p>My 3 last reviews:</p>
-          <p><small>review 1</small></p>
-          <p><small>review 2</small></p>
-          <p><small>review 3</small></p>
-          <%= link_to"Reviews","#" %>
+        <div class="creategall">
+          <div class="creatext">
+            <h2>Fill your galleries</h2>
+            <p>Upload your artwork and make it visible in one click !</p>
+            <br>
+            <%= link_to "New post", new_art_path %>
+            <br><br>
+          </div>
         </div>
+
+        <%# ----------------------------------------------------------------------------------- %>
+        <div class="big">
+          <div class="mygallery-box gall">
+            <div class="mypaint boxxx">
+              <h3>My paintings</h3>
+              <div class="myart">
+                <% paint = Art.where(category: "painting")%>
+                <% paint.each do |art| %>
+                  <div class="art">
+                    <% if art.user == current_user %>
+                      <%= link_to art_path(art) do %>
+                        <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+              <hr>
+            </div>
+
+            <div class="mydraw boxxx">
+              <h3>My drawings</h3>
+              <div class="myart">
+                <% draw = Art.where(category: "drawing")%>
+                <% draw.each do |art| %>
+                  <div class="art">
+                    <% if art.user == current_user %>
+                      <%= link_to art_path(art) do %>
+                        <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+              <hr>
+            </div>
+
+            <div class="mydigit boxxx">
+              <h3>My digital paintings</h3>
+              <div class="myart">
+                <% digit= Art.where(category: "digital painting") %>
+                <% digit.each do |art| %>
+                  <div class="art">
+                    <% if art.user == current_user %>
+                      <%= link_to art_path(art) do %>
+                        <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+              <hr>
+            </div>
+
+            <div class="myphoto boxxx">
+              <h3>My photographs</h3>
+              <div class="myart">
+                <% photo = Art.where(category: "photography")%>
+                <% photo.each do |art| %>
+                  <div class="art">
+                    <% if art.user == current_user %>
+                      <%= link_to art_path(art) do %>
+                        <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+              <hr>
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+        <div class="rightside">
+            <div class="right">
+              <div class="profile-box">
+                <div class="user-infos">
+                    <h3 class="user">Welcome <br><%= @user.nickname %> !</h3>
+                  <br>
+                  <p><%= current_user.email %></p>
+                  <p class ="city"><%= @user.city %></p>
+                </div>
+                <div class="user-photo">
+                  <% if @user.photo.attached? %>
+                    <%= cl_image_tag @user.photo.key , width:'100px',class:'av' %>
+                  <% else %>
+                    <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', width:'100px',class:'av' %>
+                  <% end %>
+                  <br>
+                  <%= link_to"Edit", edit_user_path(@user) %>
+                </div>
+                <hr>
+              </div>
+              <div class="mess-box">
+                <h3>Reviews</h3>
+                <br>
+                <p>My 3 last reviews:</p>
+                <p><small>review 1</small></p>
+                <p><small>review 2</small></p>
+                <p><small>review 3</small></p>
+                <%= link_to"Reviews","#" %>
+              </div>
+            </div>
+
+          </div>
       </div>
 
+
+
+
     </div>
-  </div>
-
-
 
 </div>

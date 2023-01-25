@@ -9,10 +9,6 @@
       <%= link_to "New post", new_art_path %>
       <br><br>
     </div>
-    <div class="create-img">
-      <%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674640589/Arty/Upload_your_your_work_1_ql9rc1.png', width:"260px" %>
-    </div>
-
   </div>
 
    <%# ----------------------------------------------------------------------------------- %>
@@ -25,14 +21,9 @@
         <% paint.each do |art| %>
           <div class="art">
             <% if art.user == current_user %>
-              <p><%= art.title %></p>
               <%= link_to art_path(art) do %>
                 <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
               <% end %>
-              <p><%= art.description %></p>
-              <p><%= art.created_at %></p>
-              <%= link_to "edit", edit_art_path(art) %>
-              <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
             <% end %>
           </div>
         <% end %>
@@ -47,15 +38,11 @@
         <% draw.each do |art| %>
           <div class="art">
             <% if art.user == current_user %>
-              <p><%= art.title %></p>
+
               <%= link_to art_path(art) do %>
                 <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
               <% end %>
-              <p><%= art.description %></p>
-              <p><%= art.created_at %></p>
-              
-              <%= link_to "edit", edit_art_path(art) %>
-              <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
+             
             <% end %>
           </div>
         <% end %>
@@ -70,15 +57,11 @@
         <% digit.each do |art| %>
           <div class="art">
             <% if art.user == current_user %>
-              <p><%= art.title %></p>
+
               <%= link_to art_path(art) do %>
                 <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
               <% end %>
-              <p><%= art.description %></p>
-              <p><%= art.created_at %></p>
-              
-              <%= link_to "edit", edit_art_path(art) %>
-              <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
+             
             <% end %>
           </div>
         <% end %>
@@ -93,15 +76,11 @@
         <% photo.each do |art| %>
           <div class="art">
             <% if art.user == current_user %>
-              <p><%= art.title %></p>
+
               <%= link_to art_path(art) do %>
                 <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
               <% end %>
-              <p><%= art.description %></p>
-              <p><%= art.created_at %></p>
-              
-              <%= link_to "edit", edit_art_path(art) %>
-              <%= link_to "delete", art_path(art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
+             
             <% end %>
           </div>
       <% end %>

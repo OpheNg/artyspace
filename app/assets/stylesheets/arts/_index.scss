@@ -16,10 +16,13 @@ h1.mygallery-title{
   padding-left: 30px;
 }
 .myart{
-  overflow: auto;
+  overflow-x: auto;
+  overscroll-behavior: contain;
   white-space: nowrap;
-  width: 70%;
+  max-width: 75%;
+
 }
+
 .creategall{
   // padding: 30px;
   // border-radius: 6px;

@@ -1,0 +1,13 @@
+<div class="global">
+  <div class="mine">
+      <% digits = @arts.where(category: "digital painting")%>
+        <% digits.each do |art| %>
+          <div class="cube">
+              <%= link_to art_path(art) do %>
+                <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
+              <% end %>
+          </div>
+        <% end %>
+  </div>
+
+</div>

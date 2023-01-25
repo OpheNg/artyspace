@@ -20,7 +20,13 @@
         <div class="big">
           <div class="mygallery-box gall">
             <div class="mypaint boxxx">
-              <h3>My paintings <span><a class= "minilink"href="#"> <i class="fa-solid fa-eye"></i></a></span></h3>
+              <h3>My paintings
+              <span>
+                <%= link_to my_paintings_path, class:"minilink" do %>
+                  <i class="fa-solid fa-eye"></i>
+                <% end %>
+              </span>
+              </h3>
               <div class="myart">
                 <% paint = @arts.where(category: "painting")%>
                 <% paint.first(4).each do |art| %>
@@ -39,7 +45,13 @@
 
             <div class="mydraw boxxx">
               <br><br>
-              <h3>My drawings <span><a class= "minilink" href="#"> <i class="fa-solid fa-eye"></i></a></span></h3>
+              <h3>My drawings
+              <span>
+                <%= link_to my_drawings_path, class:"minilink" do %>
+                  <i class="fa-solid fa-eye"></i>
+                <% end %>
+              </span>
+              </h3>
               <div class="myart">
                 <% draw = @arts.where(category: "drawing")%>
                 <% draw.first(4).each do |art| %>
@@ -58,7 +70,13 @@
 
             <div class="mydigit boxxx">
               <br><br>
-              <h3>My digital paintings <span><a  class= "minilink"href="#"> <i class="fa-solid fa-eye"></i></a></span></h3>
+              <h3>My digital paintings
+              <span>
+                <%= link_to my_digits_path, class:"minilink" do %>
+                  <i class="fa-solid fa-eye"></i>
+                <% end %>
+              </span>
+              </h3>
               <div class="myart">
                 <% digit= @arts.where(category: "digital painting") %>
                 <% digit.first(4).each do |art| %>
@@ -76,7 +94,13 @@
 
             <div class="myphoto boxxx">
               <br><br>
-              <h3>My photographs <span><a  class= "minilink"href="#"> <i class="fa-solid fa-eye"></i></a></span></h3>
+              <h3>My photographs
+              <span>
+                <%= link_to my_photos_path, class:"minilink" do %>
+                  <i class="fa-solid fa-eye"></i>
+                <% end %>
+              </span>
+              </h3>
               <div class="myart">
                 <% photo = @arts.where(category: "photography")%>
                 <% photo.first(4).each do |art| %>

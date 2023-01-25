@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   get "digital_paintings",    to: 'pages#digital_paintings'
   get "photography",          to: 'pages#photography'
 
+  get "my_paintings",         to: 'pages#my_paintings'
+  get "my_drawings",          to: 'pages#my_drawings'
+  get "my_digits",            to: 'pages#my_digits'
+  get "my_photos",            to: 'pages#my_photos'
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

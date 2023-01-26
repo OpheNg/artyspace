@@ -5,13 +5,16 @@
     <div class="bloccc">
       <% allpaintings = Art.where(category: "painting") %>
       <% allpaintings.each do |art| %>
-        <div class="card-gall">
-          <p><%= cl_image_tag art.photo.key, width:'250px', height: '200px' %></p>
+         <div class="card-gall">
+          <div class="frame">
+            <%= link_to art_path(art) do %>
+              <%= cl_image_tag art.photo.key, width:'300px', height:'300px'%>
+            <% end %>
+          </div>
           <p><%= art.title %></p>
-          <p><%= art.description %></p>
           <p><%= art.user.email %></p>
-
         </div>
+
       <% end %>
     </div>
   </div>

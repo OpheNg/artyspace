@@ -1,0 +1,10 @@
+<div class="new-review-form">
+  <%= simple_form_for [@art,@review] do |f| %>
+          <%= f.input :content , as: :text %>
+          <% f.input :current_user_id, input_html: {value: params[:current_user_id]} %>
+          <% f.input :art_id, input_html: {value: params[:art_id]} %>
+          <br>
+          <%= f.button :submit, 'Post comment'%>
+        <% end %>
+
+</div>

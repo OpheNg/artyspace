@@ -12,3 +12,11 @@
 
   <br>
 </div>
+
+<%= link_to"Comment", new_art_review_path(@art) %>
+
+<% @art.reviews.each do |review| %>
+  <p><%= review.content %></p>
+  <p><%= review.user.email %></p>
+  <p><%= review.created_at %></p>
+<% end %>

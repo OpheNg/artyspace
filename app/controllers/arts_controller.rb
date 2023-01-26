@@ -6,6 +6,7 @@ class ArtsController < ApplicationController
 
   def show
     @art = Art.find(params[:id])
+    @reviews = @art.reviews
   end
 
   def new

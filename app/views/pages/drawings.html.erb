@@ -14,8 +14,8 @@
               <%= cl_image_tag art.photo.key, width:'300px', height:'300px'%>
             <% end %>
           </div>
-          <p><%= art.title %></p>
-          <p><%= art.user.email %></p>
+          <p><b><%= art.title %></b></p>
+          <small><%= art.user.email %></small>
         </div>
 
       <% end %>

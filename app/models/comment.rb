@@ -1,4 +1,4 @@
-# class Comment < ApplicationRecord
-#   belongs_to :art
+class Comment < ApplicationRecord
+  belongs_to :art
 
-# end
+end

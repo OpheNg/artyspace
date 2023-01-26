@@ -2,6 +2,19 @@
   height: 100%;
   min-height: 100vh;
   padding: 30px;
+  margin: 0 auto;
+}
+.gall a.b{
+  text-decoration: none;
+  background-color: rgb(56, 70, 218);
+  padding: 6px 16px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  // width: fit-content;
+}
+.gall a.b:hover{
+  background-color: rgb(23, 33, 151) ;
 }
 .paintings-box h1{
   color: rgb(135, 214, 164);
@@ -10,4 +23,24 @@
   padding: 8px;
   background-color: black;
   width: fit-content;
+  margin: 20px;
+}
+.bloccc{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+.card-gall{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 8px 20px 8px;
+}
+.card-gall p{
+  margin-bottom: 0;
+}
+span.gtitle {
+  color: rgb(105, 105, 106);
 }

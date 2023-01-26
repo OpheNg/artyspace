@@ -1,6 +1,7 @@
 <div class="container">
   <br>
-  <%= link_to "Back", arts_path %>
+  <%= link_to "Back to my galleries", arts_path %>
+  <%= link_to "Home", dashboard_path %>
   <div class="fullimg">
     <%= cl_image_tag @art.photo.key, class:"fullsize"%>
   </div>

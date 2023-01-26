@@ -1,7 +1,10 @@
 <div class="container">
 
   <div class="digits-box gall">
-    <h1>Digital paintings</h1>
+    <h1>Digital paintings <span class="gtitle"> Gallery</span></h1>
+    <br>
+    <%= link_to "back", dashboard_path ,class:"b" %>
+    <br>
     <div class="bloccc">
       <% allpaintings = Art.where(category: "digital painting") %>
 

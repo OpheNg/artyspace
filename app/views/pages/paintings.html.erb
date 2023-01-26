@@ -1,7 +1,9 @@
 <div class="container">
 
   <div class="paintings-box gall">
-    <h1>Paintings</h1>
+    <h1>Paintings <span class="gtitle"> Gallery</span></h1>
+    <br><%= link_to "back", dashboard_path ,class:"b" %>
+    <br>
     <div class="bloccc">
       <% allpaintings = Art.where(category: "painting") %>
       <% allpaintings.each do |art| %>

@@ -1,24 +1,28 @@
-<div class="container">
+<div class="shadow">
+  <div class="container">
 
-  <div class="photos-box gall">
-    <h1>Photographs <span class="gtitle"> Gallery</span></h1>
-    <br>
-    <%= link_to "back", dashboard_path ,class:"b" %>
-    <br>
-    <div class="bloccc">
-      <% allpaintings = Art.where(category: "photography") %>
-      <% allpaintings.each do |art| %>
-        <div class="card-gall">
-          <div class="frame">
-            <%= link_to art_path(art) do %>
-              <%= cl_image_tag art.photo.key, width:'300px', height:'300px'%>
-            <% end %>
+
+    <div class="photos-box gall">
+      <h1>Photographs <span class="gtitle"> Gallery</span></h1>
+      <br>
+      <%= link_to "back", dashboard_path ,class:"b" %>
+      <br>
+      <div class="bloccc">
+        <% allpaintings = Art.where(category: "photography") %>
+        <% allpaintings.each do |art| %>
+          <div class="card-gall">
+            <div class="frame">
+              <%= link_to art_path(art) do %>
+                <%= cl_image_tag art.photo.key, width:'300px', height:'300px'%>
+              <% end %>
+            </div>
+            <p><b><%= art.title %></b></p>
+            <small><%= art.user.email %></small>
           </div>
-          <p><b><%= art.title %></b></p>
-          <small><%= art.user.email %></small>
-        </div>
 
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
+
 </div>

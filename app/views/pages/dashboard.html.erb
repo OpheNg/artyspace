@@ -19,25 +19,25 @@
           <p>Take a look at our artists work. Thousand pieces of art in our galleries!</p>
           <div class="galleries-mini">
             <div class="card">
-              <h6>Painting</h6>
+              <p>Painting</p>
               <%=  link_to paintings_path do %>
                 <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427055/Arty/Sans_titre_-_2023-01-22T233542.827_dxjr6b.png', width:"60px" %>
               <% end %>
             </div>
             <div class="card">
-              <h6>Drawing</h6>
+              <p>Drawing</p>
               <%= link_to drawings_path do %>
                 <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427055/Arty/Sans_titre_-_2023-01-22T233511.918_y2gxlb.png', width:"60px" %>
               <% end %>
             </div>
             <div class="card">
-              <h6>Digital painting</h6>
+              <p>Digital painting</p>
               <%= link_to digital_paintings_path do %>
                 <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427091/Arty/ablet_3_d8m2jm.png', width:"60px" %>
               <% end %>
             </div>
             <div class="card">
-              <h6>Photography</h6>
+              <p>Photography</p>
               <%= link_to photography_path do %>
                 <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1674427091/Arty/ablet_2_v1h6kf.png', width:"60px" %>
               <% end %>
@@ -73,10 +73,9 @@
           <% @reviews.last(3).each do |r| %>
           <p><small> <%=r.content.first(20)   %> </small></p>
           <% end %>
-          <p><small>review 2</small></p>
-          <p><small>review 3</small></p>
-          <%= link_to"Reviews","#" %>
+          <%= link_to"Reviews", reviews_path %>
         </div>
+        <br>
       </div>
 
       </div>

@@ -4,6 +4,7 @@
 
     </div>
     <div class="box-reviews">
+      <h2>Comments I received</h2>
       <% @reviews.each do |r| %>
         <div class="rev-card">
           <p> <%= r.art.title %> </p>
@@ -11,12 +12,14 @@
           <p> <%= r.content %> </p>
           <p> <%= r.user.email %> </p>
           <p> <%= r.created_at.strftime('%d/%m/%Y') %> </p>
+          <hr>
         </div>
       <% end %>
-      <hr>
+      <p> **********************************</p>
     </div>
 
     <div class="box-myreviews">
+      <h2>Comments I posted</h2>
       <% @mines.each do |m| %>
         <div class="rev-card">
           <p> <%= m.art.title %> </p>
@@ -24,6 +27,7 @@
           <p> <%= m.content %> </p>
           <p> <%= m.art.user.email %> </p>
           <p> <%= m.created_at.strftime('%d/%m/%Y') %> </p>
+          <hr>
         </div>
       <% end %>
     </div>

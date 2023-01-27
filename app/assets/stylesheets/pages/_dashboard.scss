@@ -137,8 +137,9 @@ p.city{
 
 .card{
   width: 160px;
+  height: 160px;
   margin: 8px 4px;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -146,11 +147,13 @@ p.city{
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
+  background-color: rgb(62, 61, 61);
 }
-.card h4{
-  font-size: 20px;
-  font-weight: bold;
+.card p{
+  font-size: 16px;
+  // font-weight: bold;
   align-self: center;
+  color: white;
 }
 .card img{
   align-self: center;

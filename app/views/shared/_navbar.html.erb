@@ -12,6 +12,14 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
 
+        <li class="nav-item active">
+          <% unless params[:action] == 'dashboard'%>
+            <%=  link_to dashboard_path, class: "nav-link" do  %>
+              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665345146/click%20n%20pole/home_iyuz6r.svg', width:"30px" %>
+            <% end %>
+          <% end %>
+        </li>
+
         <li class="nav-item">
           <%= link_to "My gallery", arts_path, class: "nav-link" %>
         </li>
@@ -22,31 +30,26 @@
             <li class="dropdown-toggle  nav-link " id="hand" data-bs-toggle="dropdown" aria-expanded="false">
               Galleries
             </li>
-              <div class="dropdown-menu  dropdown-menu-end" aria-labelledby="navbarDropdown ">
-                <%= link_to "Painting", paintings_path, class: "nav-link" %>
-                <%= link_to "Drawing", drawings_path, class: "nav-link" %>
-                <%= link_to "Digital painting", digital_paintings_path, class: "nav-link" %>
-                <%= link_to "Photography", photography_path, class: "nav-link" %>
+              <div class="dropdown-menu  dropdown-menu-end gal" aria-labelledby="navbarDropdown ">
+                <%= link_to "Painting", paintings_path, class: "nav-link droppy" %>
+                <%= link_to "Drawing", drawings_path, class: "nav-link droppy" %>
+                <%= link_to "Digital painting", digital_paintings_path, class: "nav-link droppy" %>
+                <%= link_to "Photography", photography_path, class: "nav-link droppy" %>
               </div>
         </li>
 
          <li class="nav-item dropdown">
             <li class="dropdown-toggle  nav-link " id="hand" data-bs-toggle="dropdown" aria-expanded="false">
-              My account
+              Menu
             </li>
               <div class="dropdown-menu  dropdown-menu-end" aria-labelledby="navbarDropdown ">
-                <%= link_to "Profile", "#", class: "nav-link " %>
+                <%= link_to "About", "#", class: "nav-link droppy " %>
+                <%= link_to "Contact", "#", class: "nav-link droppy " %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link " %>
               </div>
         </li>
 
-        <li class="nav-item active">
-          <% unless params[:action] == 'dashboard'%>
-            <%=  link_to dashboard_path, class: "nav-link" do  %>
-              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665345146/click%20n%20pole/home_iyuz6r.svg', width:"30px" %>
-            <% end %>
-          <% end %>
-        </li>
+
 
 
 

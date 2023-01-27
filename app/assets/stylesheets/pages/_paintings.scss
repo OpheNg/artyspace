@@ -1,5 +1,5 @@
 .shadow .container{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(101, 100, 100, 0.3) 0px 30px 60px -30px;
   // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 .gall {
@@ -26,6 +26,30 @@
 .frame {
   padding: 8px;
   background-color: black;
+  width: fit-content;
+  margin: 20px;
+}
+.frame-paint{
+  padding: 8px;
+  background-color: rgb(135, 214, 164);
+  width: fit-content;
+  margin: 20px;
+}
+.frame-draw{
+  padding: 8px;
+  background-color: rgb(186, 124, 240);
+  width: fit-content;
+  margin: 20px;
+}
+.frame-dig{
+  padding: 8px;
+  background-color: rgb(255, 207, 124);
+  width: fit-content;
+  margin: 20px;
+}
+.frame-photo{
+  padding: 8px;
+  background-color: rgb(117, 156, 242);
   width: fit-content;
   margin: 20px;
 }

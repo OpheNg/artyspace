@@ -1,13 +1,31 @@
-<div class="global">
-  <div class="mine">
-      <% digits = @arts.where(category: "digital painting")%>
-        <% digits.each do |art| %>
-          <div class="cube">
-              <%= link_to art_path(art) do %>
-                <%= cl_image_tag art.photo.key, width:'180px', height: '130px' %>
-              <% end %>
-          </div>
-        <% end %>
-  </div>
+<div class="shadow">
+  <div class="container">
+
+      <div class="paintings-box gall">
+        <h1>Digital paintings <span class="gtitle"> Gallery</span></h1>
+        <br>
+        <%= link_to "my galleries", arts_path ,class:"b" %>
+        <br>
+        <div class="bloccc">
+          <% paintings = Art.where(category: "digital painting") %>
+
+          <% paintings.each do |art| %>
+            <% if art.user == current_user %>
+
+              <div class="card-gall">
+                <div class="frame-dig">
+                  <%= link_to art_path(art) do %>
+                    <%= cl_image_tag art.photo.key, width:'300px', height:'300px'%>
+                  <% end %>
+                </div>
+                <p><small><<%= art.created_at %> </small></p>
+
+              </div>
+            <% end %>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
 
 </div>

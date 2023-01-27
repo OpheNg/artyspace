@@ -13,8 +13,24 @@
           <p> <%= r.created_at.strftime('%d/%m/%Y') %> </p>
         </div>
       <% end %>
+      <hr>
     </div>
+
+    <div class="box-myreviews">
+      <% @mines.each do |m| %>
+        <div class="rev-card">
+          <p> <%= m.art.title %> </p>
+          <p> <%= m.art.category %> </p>
+          <p> <%= m.content %> </p>
+          <p> <%= m.art.user.email %> </p>
+          <p> <%= m.created_at.strftime('%d/%m/%Y') %> </p>
+        </div>
+      <% end %>
+    </div>
+
+
   </div>
+
 
 
 

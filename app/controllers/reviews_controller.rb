@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
     @user = current_user
     # @review.art = @user.art
     @reviews = Review.where(art_id: @user.arts.ids)
+    @mines = Review.where(user_id: @user.id)
   end
 
   def show

@@ -3,7 +3,15 @@
     <br>
       <div class="navlinkup">
         <%= link_to "My galleries", arts_path %>
-        <%= link_to "Home", dashboard_path %>
+        <% if @art.category == "painting" %>
+          <%= link_to "Back", paintings_path %>
+        <% elsif @art.category == "drawing" %>
+          <%= link_to "Back", drawings_path %>
+           <% elsif @art.category == "digital painting" %>
+          <%= link_to "Back", digital_paintings_path %>
+           <% elsif @art.category == "photography" %>
+          <%= link_to "Back", photography_path %>
+        <% end %>
         <br><br>
       </div>
 

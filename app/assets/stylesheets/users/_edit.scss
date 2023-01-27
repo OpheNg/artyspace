@@ -1,0 +1,47 @@
+.edit-profile{
+  display: flex;
+  height: 100vh;
+  // min-height: 100vh;
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1674835346/Arty/mini%20profile.jpg');
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  align-items:center ;
+
+}
+.userform{
+  border-top-left-radius: 10px;
+  // border-top-right-radius: 10px;
+  padding: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 100vh;
+  width: 350px;
+  align-self: flex-end;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.User input.form-control.is-valid{
+  border-color: rgb(44, 23, 139);
+  background-image:url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1674836962/Arty/Sans_titre_-_2023-01-27T172913.617_jugxxv.png');
+}
+.userform input{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.userform img{
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.submit-link input.btn{
+  width: 100%;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: rgb(23, 23, 23);
+  padding: 6px 10px;
+  color: white;
+
+}
+.submit-link input.btn:hover{
+  font-weight: bold;
+}

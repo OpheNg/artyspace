@@ -17,13 +17,12 @@
           <br>
       </div>
       <div class="current links">
-        <%if @user == current_user %>
-            <%= link_to "edit", edit_art_path(@art) %>
-            <%= link_to "delete", art_path(@art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
+        <%if @art.user == current_user %>
+            <%= link_to "edit | ", edit_art_path(@art), class:"miniedit" %>
+            <%= link_to "delete", art_path(@art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} , class:'minidel'%>
           <% end %>
-          <br>
+          <br><br>
       </div>
-
 
       <div class="shadow">
         <div class="comments-box">
@@ -45,9 +44,9 @@
                   <small><em><%= review.user.email %> |</em></small>  <small style= "font-size:9px;"> <em><%= review.created_at.strftime("%d/%m/%Y") %></em> </small>
                 </p>
                 <p><%= review.content %></p>
-                <% if current_user %>
-                  <%= link_to "edit", edit_art_review_path(@art), class:"miniedit" %> |
-                  <%= link_to "delete", art_review_path(@art), method: :delete, dat: {confirm: "Are you sur you want to delete this comment ?"}, class:"minidel" %>
+                <% if review.user == current_user %>
+                  <small><%= link_to "edit", edit_art_review_path(@art), class:"miniedit" %> </small>|
+                  <small><%= link_to "delete", art_review_path(@art), method: :delete, dat: {confirm: "Are you sur you want to delete this comment ?"}, class:"minidel" %></small>
                 <% end %>
                 <hr>
             </div>

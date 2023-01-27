@@ -1,43 +1,63 @@
 <div class="container">
-  <br>
-  <div class="navlinkup">
-    <%= link_to "My galleries", arts_path %>
-    <%= link_to "Home", dashboard_path %>
-    <br><br>
-  </div>
-
-  <div class="box-show">
-    <h1><%= @art.title %></h1>
-      <p><%= @art.description %></p>
-      <p><small style= "font-size:10px;">posted on <%= @art.created_at.strftime("%d/%m/%Y") %> </small></p>
-      <div class="fullimg">
-        <%= cl_image_tag @art.photo.key, class:"fullsize"%>
+  <div class="motherbox">
+    <br>
+      <div class="navlinkup">
+        <%= link_to "My galleries", arts_path %>
+        <%= link_to "Home", dashboard_path %>
+        <br><br>
       </div>
-      <br>
-  </div>
-  <div class="current links">
-    <%if @user == current_user %>
-        <%= link_to "edit", edit_art_path(@art) %>
-        <%= link_to "delete", art_path(@art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
-      <% end %>
-      <br>
+
+      <div class="box-show">
+        <h1><%= @art.title %></h1>
+          <p><%= @art.description %></p>
+          <p><small style= "font-size:10px;">posted on <%= @art.created_at.strftime("%d/%m/%Y") %> </small></p>
+          <div class="fullimg">
+            <%= cl_image_tag @art.photo.key, class:"fullsize"%>
+          </div>
+          <br>
+      </div>
+      <div class="current links">
+        <%if @user == current_user %>
+            <%= link_to "edit", edit_art_path(@art) %>
+            <%= link_to "delete", art_path(@art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
+          <% end %>
+          <br>
+      </div>
+
+
+      <div class="shadow">
+        <div class="comments-box">
+          <div class="title-comment">
+            <h6>This artwork has <span class="count"><b><%= @art.reviews.count %></b></span> comment(s) </h6>
+            <p><%= link_to"Comment", new_art_review_path(@art), class:"comm" %></p>
+          </div>
+
+          <br>
+          <% @art.reviews.each do |review| %>
+            <div class="commentdiv">
+
+                <p>
+                  <% if review.user.photo.attached? %>
+                    <%= cl_image_tag review.user.photo.key, class:"avatar" %>
+                  <% else %>
+                    <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1671992140/click%20n%20pole/avatar_p2fgt6.jpg', class:"avatar" %>
+                  <% end %>
+                  <small><em><%= review.user.email %> |</em></small>  <small style= "font-size:9px;"> <em><%= review.created_at.strftime("%d/%m/%Y") %></em> </small>
+                </p>
+                <p><%= review.content %></p>
+                <% if current_user %>
+                  <%= link_to "edit", edit_art_review_path(@art), class:"miniedit" %> |
+                  <%= link_to "delete", art_review_path(@art), method: :delete, dat: {confirm: "Are you sur you want to delete this comment ?"}, class:"minidel" %>
+                <% end %>
+                <hr>
+            </div>
+          <% end %>
+          <%= link_to "Top of the page", art_path(@art), class: 'top' %>
+
+        </div>
+      </div>
   </div>
 
-  <div class="comment-link">
-    <%= link_to"Comment", new_art_review_path(@art) %>
-  </div>
 
-  <div class="comments-box">
-    <% @art.reviews.each do |review| %>
-      <p><%= review.content %></p>
-      <p><%= review.user.email %></p>
-      <p><small style= "font-size:9px;"><%= review.created_at.strftime("%d/%m/%Y") %> </small></p>
-      <% if current_user %>
-        <%= link_to "edit", edit_art_review_path(@art) %>
-        <%= link_to "delete", art_review_path(@art), method: :delete, dat: {confirm: "Are you sur you want to delete this comment ?"} %>
-      <% end %>
-    <% end %>
-
-  </div>
 
 </div>

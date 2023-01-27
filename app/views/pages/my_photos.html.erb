@@ -18,7 +18,7 @@
                     <%= cl_image_tag art.photo.key, width:'300px', height:'300px'%>
                   <% end %>
                 </div>
-                <p><small><<%= art.created_at %> </small></p>
+                <p><small style= "font-size:10px;">posted on <%= art.created_at.strftime("%d/%m/%Y") %> </small></p>
 
               </div>
             <% end %>

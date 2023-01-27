@@ -1,28 +1,43 @@
 <div class="container">
   <br>
-  <%= link_to "My galleries", arts_path %>
-  <%= link_to "Home", dashboard_path %>
-  <div class="fullimg">
-    <%= cl_image_tag @art.photo.key, class:"fullsize"%>
+  <div class="navlinkup">
+    <%= link_to "My galleries", arts_path %>
+    <%= link_to "Home", dashboard_path %>
+    <br><br>
   </div>
-  <p><%= @art.title %></p>
-  <p><%= @art.description %></p>
-  <p><%= @art.created_at %></p>
-  <%if @user == current_user %>
-    <%= link_to "edit", edit_art_path(@art) %>
-    <%= link_to "delete", art_path(@art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
-  <% end %>
-  <br>
+
+  <div class="box-show">
+    <h1><%= @art.title %></h1>
+      <p><%= @art.description %></p>
+      <p><small style= "font-size:10px;">posted on <%= @art.created_at.strftime("%d/%m/%Y") %> </small></p>
+      <div class="fullimg">
+        <%= cl_image_tag @art.photo.key, class:"fullsize"%>
+      </div>
+      <br>
+  </div>
+  <div class="current links">
+    <%if @user == current_user %>
+        <%= link_to "edit", edit_art_path(@art) %>
+        <%= link_to "delete", art_path(@art), method: :delete, data:{confirm: "Are you sur you want to delete this post ?"} %>
+      <% end %>
+      <br>
+  </div>
+
+  <div class="comment-link">
+    <%= link_to"Comment", new_art_review_path(@art) %>
+  </div>
+
+  <div class="comments-box">
+    <% @art.reviews.each do |review| %>
+      <p><%= review.content %></p>
+      <p><%= review.user.email %></p>
+      <p><small style= "font-size:9px;"><%= review.created_at.strftime("%d/%m/%Y") %> </small></p>
+      <% if current_user %>
+        <%= link_to "edit", edit_art_review_path(@art) %>
+        <%= link_to "delete", art_review_path(@art), method: :delete, dat: {confirm: "Are you sur you want to delete this comment ?"} %>
+      <% end %>
+    <% end %>
+
+  </div>
+
 </div>
-
-<%= link_to"Comment", new_art_review_path(@art) %>
-
-<% @art.reviews.each do |review| %>
-  <p><%= review.content %></p>
-  <p><%= review.user.email %></p>
-  <p><%= review.created_at %></p>
-  <% if current_user %>
-    <%= link_to "edit", edit_art_review_path(@art) %>
-    <%= link_to "delete", art_review_path(@art), method: :delete, dat: {confirm: "Are you sur you want to delete this comment ?"} %>
-  <% end %>
-<% end %>

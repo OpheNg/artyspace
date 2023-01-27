@@ -37,13 +37,14 @@ p.city{
   color: white;
   font-weight: bold;
   text-align: center;
+  width: 100%;
 }
 .user-photo a:hover{
   background-color: rgb(23, 33, 151) ;
 }
-.user-photo img{
-  margin-right: 30px;
-}
+// .user-photo img{
+//   margin-right: 30px;
+// }
 .dash-box{
   display: flex;
   height: 100%;

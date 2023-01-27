@@ -1,0 +1,21 @@
+<div class="allreviews">
+  <div class="container">
+    <div class="reviewz">
+
+    </div>
+    <div class="box-reviews">
+      <% @reviews.each do |r| %>
+        <div class="rev-card">
+          <p> <%= r.art.title %> </p>
+          <p> <%= r.art.category %> </p>
+          <p> <%= r.content %> </p>
+          <p> <%= r.user.email %> </p>
+          <p> <%= r.created_at.strftime('%d/%m/%Y') %> </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
+</div>

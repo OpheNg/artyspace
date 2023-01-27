@@ -58,6 +58,12 @@ a.minilink i{
   flex-grow: 1;
   // flex:2;
 }
+.user-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .creatext {
   width: 100%;
 }

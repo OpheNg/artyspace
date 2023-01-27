@@ -69,7 +69,10 @@
           <h3>Reviews</h3>
           <br>
           <p>My 3 last reviews:</p>
-          <p><small>review 1</small></p>
+
+          <% @reviews.last(3).each do |r| %>
+          <p><small> <%=r.content.first(20)   %> </small></p>
+          <% end %>
           <p><small>review 2</small></p>
           <p><small>review 3</small></p>
           <%= link_to"Reviews","#" %>
